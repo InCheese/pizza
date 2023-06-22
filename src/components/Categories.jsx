@@ -19,7 +19,7 @@ const chooseCategory = (id) => () => setActiveIndex(id);
         <ul>
           {
           categories.map((value, index) => (
-          <li className={activeIndex===index ? "active" : ""} onClick = {chooseCategory(index)}>
+          <li key={index} className={activeIndex===index ? "active" : ""} onClick = {chooseCategory(index)}>
             {value}
             </li>
             ))
